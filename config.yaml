@@ -1,6 +1,6 @@
 settings:
   title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  url: 'https://status.eger.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: false # experimental feature, enable only for <5 monitors or on paid plans
@@ -15,23 +15,148 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: grahameger-com # unique identifier
+    name: grahameger.com
+    description: '' # default=empty
+    url: 'https://grahameger.com/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+  - id: sydneyeger-com # unique identifier
+    name: sydneyeger.com
+    description: '' # default=empty
+    url: 'https://sydneyeger.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
-    method: GET
-    expectStatus: 200
+  - id: egerflix # unique identifier
+    name: egerflix.com
+    description: '' # default=empty
+    url: 'https://egerflix.com/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    
+   - id: agentsvideos-eger-dev # unique identifier
+    name: agentsvideos.eger.dev
+    description: '' # default=empty
+    url: 'https://agentsvideos.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
-    method: GET
-    expectStatus: 200
+   - id: analytics-eger-dev # unique identifier
+    name: analytics.eger.dev
+    description: '' # default=empty
+    url: 'https://analytics.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
+   - id: cloud-eger-dev # unique identifier
+    name: cloud.eger.dev
+    description: '' # default=empty
+    url: 'https://cloudd.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    
+    - id: deemix-eger-dev # unique identifier
+    name: deemix.eger.dev
+    description: '' # default=empty
+    url: 'https://deemix.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+    - id: deluge-eger-dev # unique identifier
+    name: deluge.eger.dev
+    description: '' # default=empty
+    url: 'https://deluge.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+   - id: familyphotos-eger-dev # unique identifier
+    name: familyphotos.eger.dev
+    description: '' # default=empty
+    url: 'https://familyphotos.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
+   - id: jackett-eger-dev # unique identifier
+    name: jackett.eger.dev
+    description: '' # default=empty
+    url: 'https://jackett.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
+   - id: lidarr-eger-dev # unique identifier
+    name: lidarr.eger.dev
+    description: '' # default=empty
+    url: 'https://lidarr.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
+    - id: password-eger-dev # unique identifier
+    name: password.eger.dev
+    description: '' # default=empty
+    url: 'https://password.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+     - id: plex-eger-dev # unique identifier
+    name: plex.eger.dev
+    description: '' # default=empty
+    url: 'https://plex.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
+    - id: portainer-eger-dev # unique identifier
+    name: portainer.eger.dev
+    description: '' # default=empty
+    url: 'https://portainer.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+
+    - id: radarr-eger-dev # unique identifier
+    name: radarr.eger.dev
+    description: '' # default=empty
+    url: 'https://radarr.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+
+    - id: portainer-eger-dev # unique identifier
+    name: portainer.eger.dev
+    description: '' # default=empty
+    url: 'https://portainer.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+    - id: sonarr-eger-dev # unique identifier
+    name: sonarr.eger.dev
+    description: '' # default=empty
+    url: 'https://sonarr.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    
+    - id: tautulli-eger-dev # unique identifier
+    name: tautulli.eger.dev
+    description: '' # default=empty
+    url: 'https://tautulli.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false    
