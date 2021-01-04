@@ -15,6 +15,14 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
+  - id: status-eger-dev # unique identifier
+    name: status.eger.dev
+    description: '' # default=empty
+    url: 'https://status.eger.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+
   - id: grahameger-com # unique identifier
     name: grahameger.com
     description: '' # default=empty
